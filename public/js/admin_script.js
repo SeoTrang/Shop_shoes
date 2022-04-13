@@ -6,13 +6,13 @@
 function chartCategory() {
     const dataCategory = {
         labels: [
-          'Red',
-          'Blue',
-          'Yellow'
+          'Nike',
+          'Vans',
+          'Adidas'
         ],
         datasets: [{
           label: 'My First Dataset',
-          data: [300, 50, 100],
+          data: [200, 80, 100],
           backgroundColor: [
             'rgb(255, 99, 132)',
             'rgb(54, 162, 235)',

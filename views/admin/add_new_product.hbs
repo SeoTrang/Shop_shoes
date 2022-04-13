@@ -1,0 +1,203 @@
+
+<div id="addProduct">
+    <div class="root">
+        <form action="/admin/store-product" method="post" enctype="multipart/form-data">
+            <div class="add-container">
+                <div class="title">
+                    <span>Thêm sản phẩm</span>
+                </div>
+                <div class="main-info">
+                    <div class="info">
+                        <div class="name">
+                            <label for="name">Tên sản phẩm</label>
+                            <div class="form-input">
+
+                                <input type="text" placeholder="Nhập tên sản phẩm.." id="name" name="name">
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            <label for="price">Giá Tiền</label>
+                            <div class="form-input">
+
+                                <input type="text" placeholder="Nhập giá tiền.." id="price" name="price">
+                            </div>
+                        </div>
+
+                        <div class="promo">
+                            <label for="promo">Giảm Giá (%)</label>
+                            <div class="form-input">
+
+                                <input type="number" min="0" value="0" placeholder="Phầm trăm giảm giá.." id="promo" name="promo">
+                            </div>
+                        </div>
+
+                        <div class="status">
+                            <label for="status">Tình trạng hàng</label>
+                            <input type="number" id="status" name="status">
+                        </div>
+
+                        <div class="count">
+                            <label for="count">Số lượng nhập</label>
+                            <input type="number" id="count" name="count">
+                        </div>
+                    </div>
+
+                    <div class="upload-img">
+                        <div class="img-frame">
+                            <div class="icon">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                            </div>
+                            <div class="img">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+
+                        <div class="upload">
+                            {{!-- <span>Chọn Ảnh</span> --}}
+                            <span>
+                                <label for="food-img">
+                                    
+                                    Chọn ảnh</label>
+                                <input  type="file" accept="image/*" name="img" id="food-img">
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+
+                {{!-- <div class="more-info">
+                  
+
+                    <div class="info-chind">
+                        <div class="text">
+                            <label for="text">Thông tin thêm</label>
+                            <div class="form-input">
+                                <textarea name="textInfo" id="text" cols="30" rows="2"></textarea>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <ul>
+                                <li>
+                                    <div class="add-img-info">
+                                        <div class="img-frame">
+                                            <div class="icon">
+                                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                            </div>
+                                            <div class="img-chind">
+                                                <img src="" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="upload">
+                                            <span>
+                                                <label for="img-info">
+                                    
+                                                    Chọn ảnh
+                                                    
+                                                </label>
+                                                <input type="file" accept="image/*" name="img" id="img-info" multiple>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="add-form-input">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>Thêm trường nhập</span>
+                        </div>
+                    </div>
+                </div> --}}
+
+                <div class="category">
+                    <label for="category">Danh mục</label>
+                    <select name="category" id="category">
+               
+                        <option value="">danh mục 1</option>
+                        <option value="">danh mục 2</option>
+                        <option value="">danh mục 3</option>
+                        <option value="">danh mục 4</option>
+                        <option value="">danh mục 5</option>
+                        <option value="">danh mục 6</option>
+
+              
+                    </select>
+                </div>
+
+                <div class="size-product">
+                    <div class="my-size">
+                        <label for="size-30">Size 30</label>
+                        <input type="checkbox" id="size-30" name="size">
+                    </div>
+
+                    <div class="my-size">
+                        <label for="size-31">Size 31</label>
+                        <input type="checkbox" id="size-31" name="size">
+                    </div>
+
+                    <div class="my-size">
+                        <label for="size-32">Size 32</label>
+                        <input type="checkbox" id="size-32" name="size">
+                    </div>
+
+                    <div class="my-size">
+                        <label for="size-33">Size 33</label>
+                        <input type="checkbox" id="size-33" name="size">
+                    </div>
+
+                    <div class="my-size">
+                        <label for="size-34">Size 34</label>
+                        <input type="checkbox" id="size-34" name="size">
+                    </div>
+
+                    <div class="my-size">
+                        <label for="size-35">Size 35</label>
+                        <input type="checkbox" id="size-35" name="size">
+                    </div>
+
+                    <div class="my-size">
+                        <label for="size-36">Size 36</label>
+                        <input type="checkbox" id="size-36" name="size">
+                    </div>
+
+                    <div class="my-size">
+                        <label for="size-37">Size 37</label>
+                        <input type="checkbox" id="size-37" name="size">
+                    </div>
+
+                    <div class="my-size">
+                        <label for="size-38">Size 38</label>
+                        <input type="checkbox" id="size-38" name="size">
+                    </div>
+
+                    <div class="my-size">
+                        <label for="size-39">Size 39</label>
+                        <input type="checkbox" id="size-39" name="size">
+                    </div>
+
+                    <div class="my-size">
+                        <label for="size-40">Size 40</label>
+                        <input type="checkbox" id="size-40" name="size">
+                    </div>
+
+                    <div class="my-size">
+                        <label for="size-41">Size 41</label>
+                        <input type="checkbox" id="size-41" name="size">
+                    </div>
+
+                </div>
+                
+
+                <div class="submit">
+                    <input type="submit" value="Thêm Món Ăn">
+                </div>
+            </div>
+
+    
+        </form>
+
+      
+
+    </div>
+</div>
