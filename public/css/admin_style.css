@@ -1,0 +1,117 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+#sidebar{
+
+    position: fixed;
+    z-index: 999;
+    float: left;
+    width: 18%;
+    background-color: #343a40;
+    color:  #c2c7d0;
+    min-height: 714px;
+}
+
+
+#sidebar .my-shop{
+    padding-top: 16px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+#sidebar .my-shop .img{
+    padding-left: 8px;
+    padding-right: 15px;
+}
+
+#sidebar .my-shop img{
+    width: 40px;
+}
+
+#sidebar .my-info{
+    padding-top: 16px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+
+}
+
+#sidebar .my-info .img{
+    padding-left: 8px;
+    padding-right: 15px;
+}
+
+#sidebar .my-info .img img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+
+}
+
+#sidebar .sidebar-chind{
+    min-height: 30px;
+    padding: 8px 16px 0px 8px;
+    cursor: pointer;
+
+}
+
+
+
+#sidebar li{
+    list-style: none;
+    padding: 8px 16px 0px 15px;
+    line-height: 30px;
+}
+
+#sidebar a{
+    text-decoration: none;
+    color: #c2c7d0;
+}
+#sidebar i{
+    color: #c2c7d0;
+    padding-right: 10px;
+}
+
+#sidebar .icon-down{
+    display: block;
+    margin-left: 15px;
+}
+
+#sidebar .icon-up{
+    margin-left: 15px;
+    display: inline-block;
+    display: none;
+   
+}
+
+#sidebar .sidebar-chind2{
+    display: none;
+}
+
+#sidebar .nav{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#sidebar .sidebar-chind:hover{
+    background-color: #494e53;
+}
+
+#sidebar ul>li:hover{
+    background-color: #494e53;
+}
+
+
+/* home admin----------------------------------------- */
+
+.body{
+    width: 1520;
+    min-height: 500px;
+}
