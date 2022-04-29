@@ -49,7 +49,7 @@ body{
 }
 
 #header .navi{
-    margin-left: 300px;
+    margin-left: 200px;
 }
 
 #header .nav{
@@ -76,6 +76,50 @@ body{
 
 
 }
+
+#header .account{
+    color: white;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+}
+
+#header .account img{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 25px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+
+#header .account .name{
+    /* position: absolute; */
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    border: 1px solid #ff4e5b;
+    padding: 5px;
+    background-color: #260759;
+    border-radius: 5px;
+}
+
+#header .account i{
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+#header .account:hover > .name{
+    /* display: block; */
+    visibility: visible;
+    opacity: 1;
+    /* transition: 0.5s; */
+}
+
 
 
 /* navi-2 */
@@ -457,6 +501,11 @@ body{
     height: 257px;
 }
 
+#body .latest-product .products .img img:hover{
+    transform: Translate(0px,-15px);
+    transition: 0.5s;
+}
+
 #body .see-more{
     margin-top: 40px;
     text-align: center;
@@ -502,7 +551,7 @@ body{
     margin-top: 30px;
     border-radius: 5px;
     height: 820px;
-    /* overflow: auto; */
+    overflow: auto; 
 }
 
 #body .Featured-products .title{
@@ -521,7 +570,10 @@ body{
     align-content: center;
 }
 
-
+#body .Featured-products .products .img img:hover{
+    transform: Translate(0px,-15px);
+    transition: 0.5s;
+}
 
 #body .Featured-products .product{
     box-shadow: 1px 5px 5px #ccc;
@@ -554,6 +606,8 @@ body{
     width: 263px;
     height: 257px;
 }
+
+
 
 
 /* footer */
@@ -861,6 +915,16 @@ body{
     color: #fff;
 }
 
+#body-dtp .product-action .buy-now a{
+    text-decoration: none;
+    color: black;
+}
+
+#body-dtp .product-action .buy-now a:hover{
+    color: white;
+    transition: 0.5s;
+}
+
 
 /* post ==============================================================================*/
 
@@ -1080,6 +1144,18 @@ body{
     border: 1px solid #260759;
 }
 
+.cart-container .order-now button a{
+    color:white;
+    display: block;
+    text-decoration: none;
+    /* width: 260px; */
+    /* background-color: green; */
+}
+
+.cart-container .order-now button a:hover{
+    color: #000;
+}
+
 .cart-container .order-now button{
     background-color: #260759;
     color: #fff;
@@ -1090,6 +1166,16 @@ body{
     color: #000;
     transition: 0.5s;
 
+}
+
+.cart-container .continue-shoping button a{
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+
+.cart-container .continue-shoping button a:hover{
+    color: white;
 }
 
 .cart-container .continue-shoping button:hover{
@@ -1261,3 +1347,66 @@ body{
     transition: 0.5s;
 }
 
+/* products */
+#products{
+    width: 100%;
+
+}
+
+#products .products-container{
+    width: 80%;
+    margin: 20px auto;
+}
+
+#products .route{
+    width: 80%;
+    margin: 80px auto;
+    margin-bottom: 0;
+}
+
+#products .products{
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+#products .products .img img:hover{
+    transform: Translate(0px,-15px);
+    transition: 0.5s;
+}
+
+
+#products .product{
+    box-shadow: 1px 5px 5px #ccc;
+    width: 273px;
+    height: 400px;
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+
+#products .product .old-price{
+    margin-top: 5px;
+    text-decoration: line-through;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#products .product .price{
+    font-weight: 700;
+    color: red;
+}
+
+#products .product img{
+    width: 263px;
+    height: 257px;
+}

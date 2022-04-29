@@ -222,76 +222,22 @@
                                 Đã thêm
                             </div>
                         </li>
+                        {{#each products}}
                         <li class="row product">
                             <div class="col-3 img">
-                                <img src="img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
+                                <img src="{{this.img}}" alt="">
                             </div>
                             <div class="col-3 name-product">
-                                Giày thể thao công nghệ
+                                {{this.name}}
                             </div>
                             <div class="col-3 sold">
-                                <span>50</span>
+                                <span>{{this.booked}}</span>
                             </div>
                             <div class="col-3 create-at">
-                                <span>10/12/2021</span>
+                                <span>{{this.createdAt}}</span>
                             </div>
                         </li>
-                        <li class="row product">
-                            <div class="col-3 img">
-                                <img src="img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
-                            </div>
-                            <div class="col-3 name-product">
-                                Giày thể thao công nghệ
-                            </div>
-                            <div class="col-3 sold">
-                                <span>50</span>
-                            </div>
-                            <div class="col-3 create-at">
-                                <span>10/12/2021</span>
-                            </div>
-                        </li>
-                        <li class="row product">
-                            <div class="col-3 img">
-                                <img src="img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
-                            </div>
-                            <div class="col-3 name-product">
-                                Giày thể thao công nghệ
-                            </div>
-                            <div class="col-3 sold">
-                                <span>50</span>
-                            </div>
-                            <div class="col-3 create-at">
-                                <span>10/12/2021</span>
-                            </div>
-                        </li>
-                        <li class="row product">
-                            <div class="col-3 img">
-                                <img src="img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
-                            </div>
-                            <div class="col-3 name-product">
-                                Giày thể thao công nghệ
-                            </div>
-                            <div class="col-3 sold">
-                                <span>50</span>
-                            </div>
-                            <div class="col-3 create-at">
-                                <span>10/12/2021</span>
-                            </div>
-                        </li>
-                        <li class="row product">
-                            <div class="col-3 img">
-                                <img src="img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
-                            </div>
-                            <div class="col-3 name-product">
-                                Giày thể thao công nghệ
-                            </div>
-                            <div class="col-3 sold">
-                                <span>50</span>
-                            </div>
-                            <div class="col-3 create-at">
-                                <span>10/12/2021</span>
-                            </div>
-                        </li>
+                        {{/each}}
                     </ul>
 
                     <div class="admin-action">

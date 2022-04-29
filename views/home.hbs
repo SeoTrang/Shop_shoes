@@ -160,132 +160,29 @@
               </div>
               <div class="products">
 
-                <a href="/detail" class="product">
+                {{#each products}}
+                <a href="/detail/{{this.slug}}" class="product">
                   <div class="img">
-                    <img src="./img/Products/Giày Adidas EQT Bask ADV xanh dương  .webp" alt="">
+                    <img src="{{this.img}}" alt="">
                   </div>
                   <div class="names">
-                    Giày Adidas EQT Bask ADV xanh dương
+                    {{this.name}}
                   </div>
                   <div class="old-price">
-                    900.000.000₫
+                    {{this.priceOld}}
                   </div>
                   <div class="price">
-                    699.000.000₫
+                    {{this.price}}
                   </div>
                 </a>
-
-                <a href="" class="product">
-                  <div class="img">
-                    <img src="./img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
-                  </div>
-                  <div class="names">
-                    Nike Air Jordan 1 Retro High Turbo Green (xanh lam)
-                  </div>
-                  <div class="old-price">
-                    900.000.000₫
-                  </div>
-                  <div class="price">
-                    780.000.000₫
-                  </div>
-                </a>
-
-                <a href="" class="product">
-                  <div class="img">
-                    <img src="./img/Products/Giày Adidas EQT Bask ADV xanh dương  .webp" alt="">
-                  </div>
-                  <div class="names">
-                    Giày Adidas EQT Bask ADV xanh dương
-                  </div>
-                  <div class="old-price">
-                    900.000.000₫
-                  </div>
-                  <div class="price">
-                    699.000.000₫
-                  </div>
-                </a>
-
-                <a href="" class="product">
-                  <div class="img">
-                    <img src="./img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
-                  </div>
-                  <div class="names">
-                    Nike Air Jordan 1 Retro High Turbo Green (xanh lam)
-                  </div>
-                  <div class="old-price">
-                    900.000.000₫
-                  </div>
-                  <div class="price">
-                    780.000.000₫
-                  </div>
-                </a>
-
-                <!-- xoa -->
-                <a href="" class="product">
-                  <div class="img">
-                    <img src="./img/Products/Giày Adidas EQT Bask ADV xanh dương  .webp" alt="">
-                  </div>
-                  <div class="names">
-                    Giày Adidas EQT Bask ADV xanh dương
-                  </div>
-                  <div class="old-price">
-                    900.000.000₫
-                  </div>
-                  <div class="price">
-                    699.000.000₫
-                  </div>
-                </a>
-
-                <a href="" class="product">
-                  <div class="img">
-                    <img src="./img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
-                  </div>
-                  <div class="names">
-                    Nike Air Jordan 1 Retro High Turbo Green (xanh lam)
-                  </div>
-                  <div class="old-price">
-                    900.000.000₫
-                  </div>
-                  <div class="price">
-                    780.000.000₫
-                  </div>
-                </a>
-
-                <a href="" class="product">
-                  <div class="img">
-                    <img src="./img/Products/Giày Adidas EQT Bask ADV xanh dương  .webp" alt="">
-                  </div>
-                  <div class="names">
-                    Giày Adidas EQT Bask ADV xanh dương
-                  </div>
-                  <div class="old-price">
-                    900.000.000₫
-                  </div>
-                  <div class="price">
-                    699.000.000₫
-                  </div>
-                </a>
-
-                <a href="" class="product">
-                  <div class="img">
-                    <img src="./img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
-                  </div>
-                  <div class="names">
-                    Nike Air Jordan 1 Retro High Turbo Green (xanh lam)
-                  </div>
-                  <div class="old-price">
-                    900.000.000₫
-                  </div>
-                  <div class="price">
-                    780.000.000₫
-                  </div>
-                </a>
+                {{/each}}
+                
                 <!-- het -->
 
               </div>
               <div class="see-more see-more-latest">
                 
-                <button><a href="">Xem Thêm</a><img src="https://img.icons8.com/ios-glyphs/30/000000/sort-down.png"/></button>
+                <button><a href="/products">Xem Thêm</a><img src="https://img.icons8.com/ios-glyphs/30/000000/sort-down.png"/></button>
               </div>
             </div>
 
@@ -298,126 +195,23 @@
               </div>
               <div class="products">
 
-                <a href="" class="product">
+                {{#each products}}
+                <a href="/detail/{{this.slug}}" class="product">
                   <div class="img">
-                    <img src="./img/Products/Giày Adidas EQT Bask ADV xanh dương  .webp" alt="">
+                    <img src="{{this.img}}" alt="">
                   </div>
                   <div class="names">
-                    Giày Adidas EQT Bask ADV xanh dương
+                    {{this.name}}
                   </div>
                   <div class="old-price">
-                    900.000.000₫
+                    {{this.priceOld}}
                   </div>
                   <div class="price">
-                    699.000.000₫
+                    {{this.price}}
                   </div>
                 </a>
+                {{/each}}
 
-                <a href="" class="product">
-                  <div class="img">
-                    <img src="./img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
-                  </div>
-                  <div class="names">
-                    Nike Air Jordan 1 Retro High Turbo Green (xanh lam)
-                  </div>
-                  <div class="old-price">
-                    900.000.000₫
-                  </div>
-                  <div class="price">
-                    780.000.000₫
-                  </div>
-                </a>
-
-                <a href="" class="product">
-                  <div class="img">
-                    <img src="./img/Products/Giày Adidas EQT Bask ADV xanh dương  .webp" alt="">
-                  </div>
-                  <div class="names">
-                    Giày Adidas EQT Bask ADV xanh dương
-                  </div>
-                  <div class="old-price">
-                    900.000.000₫
-                  </div>
-                  <div class="price">
-                    699.000.000₫
-                  </div>
-                </a>
-
-                <a href="" class="product">
-                  <div class="img">
-                    <img src="./img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
-                  </div>
-                  <div class="names">
-                    Nike Air Jordan 1 Retro High Turbo Green (xanh lam)
-                  </div>
-                  <div class="old-price">
-                    900.000.000₫
-                  </div>
-                  <div class="price">
-                    780.000.000₫
-                  </div>
-                </a>
-
-                <!-- xoa -->
-                <a href="" class="product">
-                  <div class="img">
-                    <img src="./img/Products/Giày Adidas EQT Bask ADV xanh dương  .webp" alt="">
-                  </div>
-                  <div class="names">
-                    Giày Adidas EQT Bask ADV xanh dương
-                  </div>
-                  <div class="old-price">
-                    900.000.000₫
-                  </div>
-                  <div class="price">
-                    699.000.000₫
-                  </div>
-                </a>
-
-                <a href="" class="product">
-                  <div class="img">
-                    <img src="./img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
-                  </div>
-                  <div class="names">
-                    Nike Air Jordan 1 Retro High Turbo Green (xanh lam)
-                  </div>
-                  <div class="old-price">
-                    900.000.000₫
-                  </div>
-                  <div class="price">
-                    780.000.000₫
-                  </div>
-                </a>
-
-                <a href="" class="product">
-                  <div class="img">
-                    <img src="./img/Products/Giày Adidas EQT Bask ADV xanh dương  .webp" alt="">
-                  </div>
-                  <div class="names">
-                    Giày Adidas EQT Bask ADV xanh dương
-                  </div>
-                  <div class="old-price">
-                    900.000.000₫
-                  </div>
-                  <div class="price">
-                    699.000.000₫
-                  </div>
-                </a>
-
-                <a href="" class="product">
-                  <div class="img">
-                    <img src="./img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
-                  </div>
-                  <div class="names">
-                    Nike Air Jordan 1 Retro High Turbo Green (xanh lam)
-                  </div>
-                  <div class="old-price">
-                    900.000.000₫
-                  </div>
-                  <div class="price">
-                    780.000.000₫
-                  </div>
-                </a>
                 <!-- het -->
 
               </div>

@@ -15,11 +15,11 @@
                         <div class="col-2 img">
                             <span>Ảnh</span>
                         </div>
-                        <div class="name col-3">
+                        <div class="name col-2">
                             <span>Tên khách hàng</span>
                         </div>
 
-                        <div class="shoes-name col-2">
+                        <div class="shoes-name col-3">
                             <span>Sản phẩm</span>
                         </div>
 
@@ -36,28 +36,33 @@
                             <span>confirm</span>
                         </div>
                     </div>
+
+                    {{#each orders}}
+
                     <div class="row order">
                         
                         <div class="col-2 img">
-                            <img src="img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
+                            <img src="{{this.img}}" alt="">
                         </div>
 
-                        <div class="name col-3">
-                            <span>Ma Seo Tráng</span>
+                        <div class="name col-2">
+                            <span>{{this.customerName}}</span>
                         </div>
 
-                        <div class="shoes-name col-2">
-                            <span>Giày thể thao</span><br>
-                            <span>giày thời trang</span>
+                        <div class="shoes-name col-3">
+                            {{#each this.nameProducts}}
+                            <div>{{this}}</div>
+                            {{/each}}
+                           
                         </div>
 
                         <div class="count-shoes col-1">
-                            <span>1</span><br>
-                            <span>2</span>
+                            <div>{{this.count}}</div>
+                           
                         </div>
 
                         <div class="time-booked col-3">
-                            <span>6h pm 8/12/2021</span>
+                            <span>{{this.createdAt}}</span>
                         </div>
 
                         <div class="confirm col-1">
@@ -66,6 +71,8 @@
                            </a>
                         </div>
                     </div>
+
+                    {{/each}}
 
                     
 
