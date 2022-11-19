@@ -4,117 +4,125 @@
             <div class="content">
                 <div class="product-detail"> <!--chi tiết sản phẩm-->
                     <div class="slide"> <!--hình ảnh slide-->
-                        <img src="./img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
+                        <img src="{{product.img}}" alt="">
                     </div>
     
-                    <div class="detail"> <!--thông tin sản phẩm-->
-                        <div class="item1">
-                            <div class="name-price">
-                                <div class="name">
-                                    <span>Nike Air Jordan 1 Retro High Turbo Green (xanh lam) REP 1:1</span>
-                                </div>
-                                <div class="price">
-                                  <div class="old-price">
-                                    900.000.000₫
+                    <form action="/cart" method="post">
+
+                      <input style="display: none;" type="text" name="idProduct" value="{{product._id}}">
+                      <input style="display: none;" type="text" name="slugProduct" value="{{product.slug}}">
+
+                      <div class="detail"> <!--thông tin sản phẩm-->
+                          <div class="item1">
+                              <div class="name-price">
+                                  <div class="name">
+                                      <span>{{product.name}}</span>
                                   </div>
-                                  <div class="price-current">
-                                    <span>780.000 ₫</span>
+                                  <div class="price">
+                                    <div class="old-price">
+                                      {{product.priceOld}}₫
+                                    </div>
+                                    <div class="price-current">
+                                      <span>{{product.price}}₫</span>
+                                    </div>
                                   </div>
-                                </div>
-                                
-                            </div>
-                            <div class="logo">
-                                <a href="">
-                                    <img src="./img/Barands (nhãn hiệu)/logo nike.jpg" alt="" style="width: 90px; height: 90px;">
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="short-description">
-                          <div class="status trangThai">
-                            <div class="title">
-                              Trạng thái :
-                            </div>
-                            <div class="values">
-                              Còn hàng
-                            </div>
-                          </div>
-  
-                          <div class="status tinhTrang">
-                            <div class="title">
-                              Tình trạng :
-                            </div>
-                            <div class="values">
-                              Hàng mới 100%
-                            </div>
+                                  
+                              </div>
+                              <div class="logo">
+                                  <a href="">
+                                      <img src="./img/Barands (nhãn hiệu)/logo nike.jpg" alt="" style="width: 90px; height: 90px;">
+                                  </a>
+                              </div>
                           </div>
 
-                          <div class="status baoHanh">
-                            <div class="title">
-                              Bảo hành :
+                          <div class="short-description">
+                            <div class="status trangThai">
+                              <div class="title">
+                                Trạng thái :
+                              </div>
+                              <div class="values">
+                                Còn hàng
+                              </div>
                             </div>
-                            <div class="values">
-                              6 tháng
-                            </div>
-                          </div>
-
-                        </div>
-
-                        <div class="size-shoes">
-                          <div class="title">
-                            <span>Size :</span>
-                          </div>
-                          <div class="sizeNumber">
-                            <div class="size 36"><a href="">36</a></div>
-                            <div class="size 37"><a href="">37</a></div>
-                            <div class="size 38"><a href="">38</a></div>
-                            <div class="size 39"><a href="">39</a></div>
-                            <div class="size 40"><a href="">40</a></div>
-                            <div class="size 41"><a href="">41</a></div>
-                            <div class="size 42"><a href="">42</a></div>
-                            <div class="size 43"><a href="">43</a></div>
-                          </div>
-                        </div>
-
-                        <div class="promotion">
-                          <div class="icon">
-                            <img src="./img/icons8-sun-30.png" alt="">
-                          </div>
-                          <div class="content-promotion">
-                            [Từ 01/02- 10/02] mua sắm tại Shoes Shop có ngay cơ hội nhận lì xì trị giá 2.022đ, 22.000đ, 222.000đ, 2.022.000đ, 22.000.000đ
-                          </div>
-                        </div>
-
-                        <div class="amount">
-                          <div class="amount-pay">
-                            <div class="title">
-                              Số lượng mua :
-                            </div>
-                            <div class="amount-input">
-                              <button class="tam subtract">-</button>
-                              <input value="1" type=" number" class="tam number" name="amount">
-                              <button class="tam add">+</button>
-                            </div>
-                          </div>
-                          <div class="sale">
-                            <img src="./img/san-sale-920x230-12.png" alt="">
-                          </div>
-                        </div>
-
-                        <div class="product-action">
-                          <div class="buy-now">
-                            <button>
-                              Mua ngay
-                            </button>
-                          </div>
-                          <div class="add-cart">
-                            <button>
-                              Thêm vào giỏ hàng
-                            </button>
-                          </div>
-                        </div>
     
-                    </div>
+                            <div class="status tinhTrang">
+                              <div class="title">
+                                Tình trạng :
+                              </div>
+                              <div class="values">
+                                Hàng mới 100%
+                              </div>
+                            </div>
+
+                            <div class="status baoHanh">
+                              <div class="title">
+                                Bảo hành :
+                              </div>
+                              <div class="values">
+                                6 tháng
+                              </div>
+                            </div>
+
+                          </div>
+
+                          <div class="size-shoes">
+                            <div class="title">
+                              <span>Size :</span>
+                            </div>
+                            <div class="sizeNumber">
+                              
+                              {{!-- <div class="size 36"><a href="">{{this}}</a></div> --}}
+                              <select name="size" id="size" style="margin-left: 15px; min-width: 60px; line-height: 1.5; border-radius: 5px;">
+                                {{#each product.size}}
+                                <option value="{{this}}">{{this}}</option>
+                                {{/each}}
+                              </select>
+                              
+                            </div>
+                          </div>
+
+                          <div class="promotion">
+                            <div class="icon">
+                              <img src="./img/icons8-sun-30.png" alt="">
+                            </div>
+                            <div class="content-promotion">
+                              [Từ 01/02- 10/02] mua sắm tại Shoes Shop có ngay cơ hội nhận lì xì trị giá 2.022đ, 22.000đ, 222.000đ, 2.022.000đ, 22.000.000đ
+                            </div>
+                          </div>
+
+                          <div class="amount">
+                            <div class="amount-pay">
+                              <div class="title">
+                                Số lượng mua :
+                              </div>
+                              <div class="amount-input">
+                                <button class="tam subtract">-</button>
+                                <input value="1" type=" number" class="tam number" name="amount">
+                                <button class="tam add">+</button>
+                              </div>
+                            </div>
+                            <div class="sale">
+                              <img src="./img/san-sale-920x230-12.png" alt="">
+                            </div>
+                          </div>
+
+                          <div class="product-action">
+                            <div class="buy-now">
+                              
+                                <button>
+                                <a href="/check-order/{{this.slug}}">Mua ngay</a>
+                              </button>
+                    
+                            </div>
+                            <div class="add-cart">
+                              <button type="submit">
+                                Thêm vào giỏ hàng
+                              </button>
+                            </div>
+                          </div>
+      
+                      </div>
+                    </form>
                 </div>
     
                 <div class="post">

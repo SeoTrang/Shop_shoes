@@ -11,7 +11,12 @@ const res = require('express/lib/response');
 
 
 const app = express();
-var port = 3000;
+var port = 2000;
+
+// connect database
+var db = require('./config/db');
+
+db.connect();
 
 const hbs = create({
     layoutsDir: `${__dirname}/views/layouts`,
@@ -29,6 +34,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use("/admin",express.static(path.join(__dirname, 'public')));
+app.use("/detail",express.static(path.join(__dirname, 'public')));
+app.use("/check-order",express.static(path.join(__dirname, 'public')));
+app.use("/admin/update-product",express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
@@ -41,9 +49,9 @@ router(app);
 
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+// app.use(function(req, res, next) {
+//   next(createError(404));
+// });
 
 // error handler
 app.use(function(err, req, res, next) {

@@ -1,7 +1,7 @@
 
 <div id="addProduct">
     <div class="root">
-        <form action="/admin/store-product" method="post" enctype="multipart/form-data">
+        <form action="/admin/store-new-product" method="post" enctype="multipart/form-data">
             <div class="add-container">
                 <div class="title">
                     <span>Thêm sản phẩm</span>
@@ -16,6 +16,13 @@
                             </div>
                         </div>
 
+                        <div class="price-old">
+                            <label for="price-old">Giá Tiền cũ</label>
+                            <div class="form-input">
+
+                                <input type="text" placeholder="Nhập giá tiền cũ.." id="price" name="priceOld">
+                            </div>
+                        </div>
                         <div class="price">
                             <label for="price">Giá Tiền</label>
                             <div class="form-input">
@@ -33,8 +40,8 @@
                         </div>
 
                         <div class="status">
-                            <label for="status">Tình trạng hàng</label>
-                            <input type="number" id="status" name="status">
+                            <label for="status">Tình trạng hàng (%)</label>
+                            <input type="number" minlength="0" id="status" name="status" value="100">
                         </div>
 
                         <div class="count">
@@ -44,6 +51,11 @@
                     </div>
 
                     <div class="upload-img">
+
+                        <div class="img-logo">
+                            <img src="./img/shoes logo 4.png" alt="">
+                        </div>
+
                         <div class="img-frame">
                             <div class="icon">
                                 <i class="fa-solid fa-cloud-arrow-up"></i>
@@ -56,10 +68,10 @@
                         <div class="upload">
                             {{!-- <span>Chọn Ảnh</span> --}}
                             <span>
-                                <label for="food-img">
+                                <label for="shoes-img">
                                     
                                     Chọn ảnh</label>
-                                <input  type="file" accept="image/*" name="img" id="food-img">
+                                <input  type="file" accept="image/*" name="img" id="shoes-img">
                             </span>
                         </div>
 
@@ -113,84 +125,79 @@
                 <div class="category">
                     <label for="category">Danh mục</label>
                     <select name="category" id="category">
-               
-                        <option value="">danh mục 1</option>
-                        <option value="">danh mục 2</option>
-                        <option value="">danh mục 3</option>
-                        <option value="">danh mục 4</option>
-                        <option value="">danh mục 5</option>
-                        <option value="">danh mục 6</option>
+                        {{#each categorys}}
+                        <option value="{{this._id}}">{{this.name}}</option>
 
-              
+                        {{/each}}
                     </select>
                 </div>
 
                 <div class="size-product">
                     <div class="my-size">
                         <label for="size-30">Size 30</label>
-                        <input type="checkbox" id="size-30" name="size">
+                        <input type="checkbox" id="size-30" name="size" value="30" checked>
                     </div>
 
                     <div class="my-size">
                         <label for="size-31">Size 31</label>
-                        <input type="checkbox" id="size-31" name="size">
+                        <input type="checkbox" id="size-31" name="size" value="31" checked>
                     </div>
 
                     <div class="my-size">
                         <label for="size-32">Size 32</label>
-                        <input type="checkbox" id="size-32" name="size">
+                        <input type="checkbox" id="size-32" name="size" value="32" checked>
                     </div>
 
                     <div class="my-size">
                         <label for="size-33">Size 33</label>
-                        <input type="checkbox" id="size-33" name="size">
+                        <input type="checkbox" id="size-33" name="size" checked>
                     </div>
 
                     <div class="my-size">
                         <label for="size-34">Size 34</label>
-                        <input type="checkbox" id="size-34" name="size">
+                        <input type="checkbox" id="size-34" name="size" checked>
                     </div>
 
                     <div class="my-size">
                         <label for="size-35">Size 35</label>
-                        <input type="checkbox" id="size-35" name="size">
+                        <input type="checkbox" id="size-35" name="size" checked>
                     </div>
 
                     <div class="my-size">
                         <label for="size-36">Size 36</label>
-                        <input type="checkbox" id="size-36" name="size">
+                        <input type="checkbox" id="size-36" name="size" checked>
                     </div>
 
                     <div class="my-size">
                         <label for="size-37">Size 37</label>
-                        <input type="checkbox" id="size-37" name="size">
+                        <input type="checkbox" id="size-37" name="size" checked>
                     </div>
 
                     <div class="my-size">
                         <label for="size-38">Size 38</label>
-                        <input type="checkbox" id="size-38" name="size">
+                        <input type="checkbox" id="size-38" name="size" checked>
                     </div>
 
                     <div class="my-size">
                         <label for="size-39">Size 39</label>
-                        <input type="checkbox" id="size-39" name="size">
+                        <input type="checkbox" id="size-39" name="size" checked>
                     </div>
 
                     <div class="my-size">
                         <label for="size-40">Size 40</label>
-                        <input type="checkbox" id="size-40" name="size">
+                        <input type="checkbox" id="size-40" name="size" checked>
                     </div>
 
                     <div class="my-size">
                         <label for="size-41">Size 41</label>
-                        <input type="checkbox" id="size-41" name="size">
+                        <input type="checkbox" id="size-41" name="size" checked>
                     </div>
 
                 </div>
                 
 
                 <div class="submit">
-                    <input type="submit" value="Thêm Món Ăn">
+                    <input type="submit" value="Thêm sản phẩm">
                 </div>
             </div>
 

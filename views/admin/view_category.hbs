@@ -26,14 +26,14 @@
                         </div>
                     </div>
 
-         
+                    {{#each categorys}}
                     <div class="row my-category">
                         <div class="col-4 name">
-                            <span>Nike</span>
+                            <span>{{this.name}}</span>
                         </div>
 
                         <div class="col-3 time-add">
-                            <span>10/12/2021</span>
+                            <span>{{this.createdAt}}</span>
                         </div>
 
                         <div class="col-2 edit action">
@@ -44,96 +44,8 @@
                             <i class="fa-solid fa-trash"></i>
                         </div>
                     </div>
-                    
-                    <div class="row my-category">
-                        <div class="col-4 name">
-                            <span>Nike</span>
-                        </div>
-
-                        <div class="col-3 time-add">
-                            <span>10/12/2021</span>
-                        </div>
-
-                        <div class="col-2 edit action">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-
-                        <div class="col-2 delete action">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-
-                    <div class="row my-category">
-                        <div class="col-4 name">
-                            <span>Nike</span>
-                        </div>
-
-                        <div class="col-3 time-add">
-                            <span>10/12/2021</span>
-                        </div>
-
-                        <div class="col-2 edit action">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-
-                        <div class="col-2 delete action">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-
-                    <div class="row my-category">
-                        <div class="col-4 name">
-                            <span>Nike</span>
-                        </div>
-
-                        <div class="col-3 time-add">
-                            <span>10/12/2021</span>
-                        </div>
-
-                        <div class="col-2 edit action">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-
-                        <div class="col-2 delete action">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-
-                    <div class="row my-category">
-                        <div class="col-4 name">
-                            <span>Nike</span>
-                        </div>
-
-                        <div class="col-3 time-add">
-                            <span>10/12/2021</span>
-                        </div>
-
-                        <div class="col-2 edit action">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-
-                        <div class="col-2 delete action">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-
-                    <div class="row my-category">
-                        <div class="col-4 name">
-                            <span>Nike</span>
-                        </div>
-
-                        <div class="col-3 time-add">
-                            <span>10/12/2021</span>
-                        </div>
-
-                        <div class="col-2 edit action">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-
-                        <div class="col-2 delete action">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
+                    {{/each}}
+                   
                
                   
                   

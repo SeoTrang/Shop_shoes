@@ -2,137 +2,149 @@
 
 
 <div class="order-info-container">
-    <div class="order-info">
-        <h5>Địa chỉ nhận hàng</h5>
-        <div class="customer-info">
-            <div class="name-phone">
-                <div class="input-check-order customer-name">
-                <span class="title">Tên khách hàng</span>
-                <input type="text" name="customerName" placeholder="Nhập tên của bạn...">
+    <form action="/store-order" method="post">
+        <div class="order-info">
+            <h5>Địa chỉ nhận hàng</h5>
+            <div class="customer-info">
+                <div class="name-phone">
+                    <div class="input-check-order customer-name">
+                    <span class="title">Tên khách hàng</span>
+                    <input type="text" name="customerName" value="{{user.name}}" placeholder="Nhập tên của bạn...">
 
+                    </div>
+
+                    <div class="input-check-order customer-phone">
+                        <span class="title">Số điện thoại</span>
+                        <input type="number" name="customerPhone" value="{{user.phone}}" placeholder="Nhập số điệnt thoại của bạn....">
+                        
+                    </div>
                 </div>
 
-                <div class="input-check-order customer-phone">
-                    <span class="title">Số điện thoại</span>
-                    <input type="number" name="customerPhone" placeholder="Nhập số điệnt thoại của bạn....">
+                <div class="input-check-order customer-email">
+                    <span class="title">Email</span>
+                    <input type="email" name="customerEmail" value="{{user.email}}" placeholder="Nhập email của bạn....">
                     
                 </div>
+
+                <div class=" input-check-order customer-address">
+                    <div class="title">Địa chỉ nhận hàng</div>
+                    <textarea name="customerAddress" id="" cols="90" rows="2" placeholder="Nhập địa chỉ nhận hàng...."></textarea>
+                </div>
             </div>
 
-            <div class="input-check-order customer-email">
-                <span class="title">Email</span>
-                <input type="email" name="customerEmail" placeholder="Nhập email của bạn....">
-                
+            <h5 class="title-products-info">Thông tin sản phẩm</h5>
+            <div class="products-order-info"> <!--poi = products-order-info-->
+                <div class="container nav-order-poi" >
+                    <div class="row align-items-center">
+                        <div class="col">
+                            Hình ảnh
+                        </div>
+                        <div class="col">
+                            Tên sản phẩm
+                        </div>
+                        <div class="col">
+                            Đơn giá
+                        </div>
+                        <div class="col">
+                            Số lượng
+                        </div>
+                        <div class="col">
+                            Thành tiền
+                        </div>
+                    </div>
+    
             </div>
 
-            <div class=" input-check-order customer-address">
-                <div class="title">Địa chỉ nhận hàng</div>
-                <textarea name="customer-address" id="" cols="90" rows="2" placeholder="Nhập địa chỉ nhận hàng...."></textarea>
+            <div style="margin-top: 10px;" class="container products-poi">
+                    {{#each products}}
+
+                    <input style="display: none;" type="text" value="{{this._id}}" name="idProducts">
+                    <input style="display: none;" type="text" name="count" id="" value="{{this.temp}}">
+                    <input style="display: none;" type="text" value="{{this.name}}" name="nameProducts">
+                    <div class="row align-items-center">
+
+                        <div class="col img-poi">
+                            <img src="{{this.img}}" alt="">
+                                
+                        </div>
+                        <div class="col name-poi">
+                            {{this.name}}
+                        </div>
+                        <div class="col price-poi">
+                            {{this.price}}₫
+                        </div>
+                        <div class="col count-poi">
+                            {{this.temp}}
+                        </div>
+                        <div class="col into-money-poi">
+                            1.520.000₫
+                        </div>
+                    </div>
+
+                    {{/each}}
+    
             </div>
+
+            {{!-- <div style="margin-top: 10px;" class="container products-poi">
+                    <div class="row align-items-center">
+                        <div class="col img-poi">
+                            <img src="./img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
+                                
+                        </div>
+                        <div class="col name-poi">
+                            Giày Adidas EQT Bask ADV xanh dương
+                        </div>
+                        <div class="col price-poi">
+                            1.520.000₫
+                        </div>
+                        <div class="col count-poi">
+                            1
+                        </div>
+                        <div class="col into-money-poi">
+                            1.520.000₫
+                        </div>
+                    </div>
+    
+            </div> --}}
+
+            
+
+            </div>
+
+            <div class="check-order">
+                <div class="total-money">
+
+                    <div class="none">
+
+                    </div>
+
+                    <div class="content">
+                        <div class="title">
+                        Tổng tiền :  
+                        </div>
+
+                        <div style="color: red; margin-left: 5px;" class="money">
+                        1.520.000₫
+                    </div>
+                    </div>
+                    
+                </div>
+
+                <div class="action">
+                    <div class="btn-order continue-shoping">
+                        <button><a href="/products">Tiếp tục mua hàng</a></button>
+                    </div>
+                    <div  class="btn-order order-now">
+                        <button type="submit">Đặt hàng ngay</button>
+                    </div>
+
+                </div>
+            </div>
+
+            
         </div>
+    </form>
 
-        <h5 class="title-products-info">Thông tin sản phẩm</h5>
-        <div class="products-order-info"> <!--poi = products-order-info-->
-            <div class="container nav-order-poi" >
-                <div class="row align-items-center">
-                    <div class="col">
-                        Hình ảnh
-                    </div>
-                    <div class="col">
-                        Tên sản phẩm
-                    </div>
-                    <div class="col">
-                        Đơn giá
-                    </div>
-                    <div class="col">
-                        Số lượng
-                    </div>
-                    <div class="col">
-                        Thành tiền
-                    </div>
-                </div>
-  
-         </div>
-
-         <div style="margin-top: 10px;" class="container products-poi">
-                <div class="row align-items-center">
-                    <div class="col img-poi">
-                        <img src="./img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
-                            
-                    </div>
-                    <div class="col name-poi">
-                        Giày Adidas EQT Bask ADV xanh dương
-                    </div>
-                    <div class="col price-poi">
-                        1.520.000₫
-                    </div>
-                    <div class="col count-poi">
-                        1
-                    </div>
-                    <div class="col into-money-poi">
-                        1.520.000₫
-                    </div>
-                </div>
-  
-         </div>
-
-         <div style="margin-top: 10px;" class="container products-poi">
-                <div class="row align-items-center">
-                    <div class="col img-poi">
-                        <img src="./img/Products/Nike Air Jordan 1 Retro High Turbo Green (xanh lam).jpg" alt="">
-                            
-                    </div>
-                    <div class="col name-poi">
-                        Giày Adidas EQT Bask ADV xanh dương
-                    </div>
-                    <div class="col price-poi">
-                        1.520.000₫
-                    </div>
-                    <div class="col count-poi">
-                        1
-                    </div>
-                    <div class="col into-money-poi">
-                        1.520.000₫
-                    </div>
-                </div>
-  
-         </div>
-
-         
-
-        </div>
-
-        <div class="check-order">
-            <div class="total-money">
-
-                <div class="none">
-
-                </div>
-
-                <div class="content">
-                    <div class="title">
-                    Tổng tiền :  
-                    </div>
-
-                    <div style="color: red; margin-left: 5px;" class="money">
-                    1.520.000₫
-                </div>
-                </div>
-                
-            </div>
-
-            <div class="action">
-                <div class="btn-order continue-shoping">
-                    <button>Tiếp tục mua hàng</button>
-                </div>
-                <div  class="btn-order order-now">
-                    <button>Đặt hàng ngay</button>
-                </div>
-
-            </div>
-        </div>
-
-        
 </div>
 
 
@@ -140,5 +152,7 @@
 <script>
     var color = document.getElementById("navParents");
     color.style.backgroundColor = "#260759";
+
+
 
 </script>
