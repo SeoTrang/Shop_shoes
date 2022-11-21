@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div id="products">
     <div class="route">
         <h5><i class="fa-solid fa-house"></i> > sản phẩm</h5>
@@ -33,4 +34,41 @@
       
       console.log(color);
       color.style.backgroundColor = "#260759";
+=======
+<div id="products">
+    <div class="route">
+        <h5><i class="fa-solid fa-house"></i> > sản phẩm</h5>
+    </div>
+    <div class="products-container">
+        <div class="products">
+
+                {{#each products}}
+                <a href="/detail/{{this.slug}}" class="product">
+                  <div class="img">
+                    <img src="{{this.img}}" alt="">
+                  </div>
+                  <div class="names">
+                    {{this.name}}
+                  </div>
+                  <div class="old-price">
+                    {{this.priceOld}}
+                  </div>
+                  <div class="price">
+                    {{this.price}}
+                  </div>
+                </a>
+                {{/each}}
+                
+                <!-- het -->
+
+    </div>
+    </div>
+</div>
+
+<script>
+    var color = document.getElementById("navParents");
+      
+      console.log(color);
+      color.style.backgroundColor = "#260759";
+>>>>>>> bbf8e4cb3a63354c4dadc95e587bbd7331ea4b20
 </script>

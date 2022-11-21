@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -101,4 +102,109 @@
     {{!-- <script src=".js/auth.js"></script> --}}
 </div>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    {{!-- jquery --}}
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./css/auth.css">
+</head>
+<body>
+
+    <div id="add-user">
+    <div class="root">
+        <div class="space"></div>
+        <div class="add-user-container">
+            <div class="title">
+                <h3>Tạo tài khoản
+                </h3>
+            </div>
+            <form action="store-user" method="post" enctype="multipart/form-data">
+                <div class="form-add-user">
+                    <div class="main-info">
+                        <div class="name form-input">
+                            <label for="name">Tên</label>
+                            <div class="my-form">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" id="name" name="name">
+                            </div>
+                        </div>
+
+                        <div class="user form-input">
+                            <label for="email">Email</label>
+                            <div class="my-form">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="email" id="email" name="email">
+
+                            </div>
+                        </div>
+
+
+                        <div class="phone form-input">
+                            <label for="phone">Số điện thoại</label>
+                            
+                            <div class="my-form">
+                                <i class="fa-solid fa-square-phone"></i>
+                                <input type="number" id="phone" name="phone">
+                            </div>
+                        </div>
+
+                        <div class="pass-word form-input">
+                            <label for="pass-word">Mật khẩu</label>
+                            
+                            <div class="my-form">
+                                <i class="fa-solid fa-key"></i>
+                                <input type="password" id="pass-word" name="passWord">
+                            </div>
+                        </div>
+
+                        <div class="confirm-pass-word form-input">
+                            <label for="confirm-pass-word">Nhập lại mật khẩu</label>
+                            
+                            <div class="my-form">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" id="confirm-pass-word" name="confirmPassWord">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="img">
+                        <div class="my-img">
+                            <img src="img/shoes logo 4.png" alt="">
+                        </div>
+
+                        <div class="avatar">
+                            <input type="file" accept="image/*" name="avatar" id="avatar">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="submit">
+                    <button type="submit">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <span>Tạo</span>
+                    </button>
+                </div>
+            </form>
+
+            
+        </div>
+    </div>
+
+    {{!-- <script src=".js/auth.js"></script> --}}
+</div>
+</body>
+>>>>>>> bbf8e4cb3a63354c4dadc95e587bbd7331ea4b20
 </html>

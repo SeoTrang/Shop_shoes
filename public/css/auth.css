@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin: 0;
     padding: 0;
@@ -248,3 +249,255 @@ h1{
     transition: 0.5s;
     border-radius: 5px;
 }
+=======
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    
+
+}
+
+body{
+    width: 1536px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    background-color: #f0f2f5;
+}
+
+h1{
+    color: blue;
+    font-size: 80px;
+    height: 106px;
+
+}
+
+#log-in{
+    width: 100%;
+}
+
+#log-in .log-in-container{
+    width: 70%;
+    margin: 0 auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#log-in .title{
+    padding: 5%;
+    width: 50%;
+}
+
+#log-in .form{
+    width: 50%;
+    padding: 5%;
+}
+
+#log-in .form-user{
+    width: 100%;
+    line-height: 2;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 5px 5px 5px #ccc;
+    border-radius: 10px;
+}
+
+#log-in .form-user .form-input{
+    
+    display: flex;
+    align-items: center;
+
+}
+
+#log-in .form-user input{
+    width: 100%;
+    height: 22px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    border: 2px solid blue;
+
+}
+
+#log-in .form-user .form-input i{
+    margin-right: 10px;
+    font-size: 30px;
+    padding-bottom: 15px;
+    color: blue;
+}
+
+#log-in .action{
+    width: 100%;
+    margin-top: 25px;
+
+}
+
+#log-in .action .sign-in{
+    
+    width: 100%;
+}
+
+#log-in .action button{
+    cursor: pointer;
+    color: white;
+    width: 100%;
+    background-color: blue;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+#log-in .action .or{
+    margin-top: 50px;
+
+    border-bottom: 1px solid #ccc;
+}
+
+
+#log-in .action .sign-up{
+    cursor: pointer;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#log-in .action .sign-up a{
+    text-align: center;
+    /* background-color: green; */
+    width: 100%;
+    text-decoration: none;
+    background-color: rgb(18, 212, 109);
+    color: white;
+    /* padding: 5px; */
+    border-radius: 10px;
+}
+
+
+
+/* #log-in .action .tam{
+    display: inline-block;
+    width: 100%;
+    color: white;
+
+    background-color: blue;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+} */
+
+
+
+
+/* add user */
+#add-user{
+    background-color: #344f77;
+    line-height: 1.5;
+    color: white;
+    width: 1526px;
+    overflow-x: hidden;
+    min-height: 700px;
+
+}
+
+#add-user .title{
+    
+    width: 100%;
+    text-align: center;
+}
+
+.root{
+    width: 60%;
+    margin: 0 auto;
+}
+
+#add-user .space{
+    height: 15px;
+}
+#add-user .add-user-container{
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    width: 80%;
+    min-height: 600px;
+    margin: 0 auto;
+    background-color: #4c145f;
+    border-radius: 5px;
+    
+}
+
+#add-user .form-add-user{
+    
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#add-user .img{
+    width: 48%;
+}
+#add-user img{
+    width: 100%;
+}
+
+#add-user .main-info{
+    width: 48%;
+    color: white;
+}
+
+#add-user .form-input{
+    width: 100%;
+}
+
+#add-user .main-info input{
+    padding-bottom: 0;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #dbec01;
+    margin-left: 20px;
+    margin-bottom: 15px;
+
+}
+
+#add-user .main-info .my-form{
+    display: flex;
+    align-items: center;
+}
+#add-user .main-info .my-form i{
+    font-size: 30px;
+ 
+    color: #1478cf;
+}
+
+#add-user .submit{
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    margin-bottom: 50px;
+    /* background-color: #ffc107; */
+}
+
+#add-user .submit button{
+    cursor: pointer;
+    background-color: none;
+    border: none;
+    width: 100%;
+    background-color: #ffc107;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#add-user .submit button:hover{
+    background-color: #017aec;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+>>>>>>> bbf8e4cb3a63354c4dadc95e587bbd7331ea4b20

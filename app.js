@@ -18,6 +18,11 @@ var db = require('./config/db');
 
 db.connect();
 
+// connect database
+var db = require('./config/db');
+
+db.connect();
+
 const hbs = create({
     layoutsDir: `${__dirname}/views/layouts`,
     extname: `hbs`,
@@ -36,7 +41,9 @@ app.use(cookieParser());
 app.use("/admin",express.static(path.join(__dirname, 'public')));
 app.use("/detail",express.static(path.join(__dirname, 'public')));
 app.use("/check-order",express.static(path.join(__dirname, 'public')));
+
 app.use("/admin/update-product",express.static(path.join(__dirname, 'public')));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 
