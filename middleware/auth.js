@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var jwt = require('jsonwebtoken');
 
 function chekedsigned (req,res,next){
@@ -17,24 +16,4 @@ function chekedsigned (req,res,next){
     }
   }
 
-=======
-var jwt = require('jsonwebtoken');
-
-function chekedsigned (req,res,next){
-    try {
-      // console.log('da vao!!!!!!!!!!')
-      var token  = req.cookies.token;
-      var signed = jwt.verify(token,'jwt');
-  
-      // console.log(signed._id)
-      if(signed){
-        res.cookie('_id',signed._id, { maxAge: 24*60*60*1000, httpOnly: true })
-        next();
-      }
-    } catch (error) {
-      res.redirect('/sign-in');
-    }
-  }
-
->>>>>>> bbf8e4cb3a63354c4dadc95e587bbd7331ea4b20
   module.exports = chekedsigned;

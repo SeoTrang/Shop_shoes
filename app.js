@@ -2,7 +2,10 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+
+var morgan = require('morgan')
+
+ 
 
 var router = require('./routes');
 
@@ -18,10 +21,7 @@ var db = require('./config/db');
 
 db.connect();
 
-// connect database
-var db = require('./config/db');
 
-db.connect();
 
 const hbs = create({
     layoutsDir: `${__dirname}/views/layouts`,
@@ -33,6 +33,11 @@ const hbs = create({
 app.engine('hbs', hbs.engine);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+
+// morgan
+
+app.use(morgan('combined'))
 
 // app.use(logger('dev'));
 app.use(express.json());
