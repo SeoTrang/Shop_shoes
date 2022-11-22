@@ -21,7 +21,12 @@ router.get('/view-products',check_admin,check_admin,
 router.post('/store-new-product',check_admin,product_img.single('img'),
                                 admin.storeProduct);
 
+router.get('/update-product/:slug',checksigned,
+                                check_admin,
+                                admin.updateProducts);
 
+router.post('/store-update-product/:slug',checksigned,check_admin,product_img.single('img'),
+                                admin.StoreUpdateProducts);
 
 // order
 router.get('/wait-for-confirmation',check_admin,admin.orderWaitConfirm); 

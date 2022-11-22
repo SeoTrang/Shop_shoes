@@ -133,6 +133,80 @@ class admin{
         
     }
 
+    //[get]/update/:slug
+
+    updateProducts(req,res,next){
+        // products.findById({})
+        categorys.find({})
+        .then(categorys =>{
+            products.findOne({slug:req.params.slug})
+            .then(product =>{
+                // res.json(product)
+                res.render("admin/update_product",{
+                    layout:"admin_layout",
+                    product:mongoosesToObject(product),
+                    categorys:mutipleMogooseToObject(categorys)
+                })
+                // res.render('admin/update_product',{
+                //  layout:"admin_layout",
+                //  products:mongoosesToObject(product)})
+            })
+        })
+       
+    }
+
+
+    //[post]/update/:slug
+
+    async StoreUpdateProducts(req,res,next){
+
+        // res.json(req.params.slug);
+
+     
+            try {
+                await products.findOneAndUpdate({slug:req.params.slug},
+                    {
+                        name        :req.body.name,               
+                        count       :0,
+                        booked      :0,
+                        priceOld    :req.body.priceOld,
+                        price       :req.body.price,
+                        idCategory  :req.body.category,
+                        size        :req.body.size,
+                        img         :path_product+req.file.filename,
+                        promo       :req.body.promo,
+                        temp        :""
+                    }
+                )
+            } catch (error) {
+                await products.findOneAndUpdate({slug:req.params.slug},
+                    {
+                        name        :req.body.name,               
+                        count       :0,
+                        booked      :0,
+                        priceOld    :req.body.priceOld,
+                        price       :req.body.price,
+                        idCategory  :req.body.category,
+                        size        :req.body.size,
+                       
+                        promo       :req.body.promo,
+                        temp        :""
+                    }
+                )
+                
+
+            }
+      
+            
+
+        products.findOne({slug:req.params.slug})
+            .then(product =>{
+                res.json(product)
+            })
+
+            
+    }
+
     viewProducts(req,res,next){
         products.find({})
         .then(products =>{
