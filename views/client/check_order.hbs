@@ -6,15 +6,19 @@
         <div class="order-info">
             <h5>Địa chỉ nhận hàng</h5>
             <div class="customer-info">
-                <div class="name-phone">
+                <div class="name-phone user-name">
                     <div class="input-check-order customer-name">
                     <span class="title">Tên khách hàng</span>
+                    <div class="invalid" >Thông tin không hợp lệ</div>
+                            
                     <input type="text" name="customerName" value="{{user.name}}" placeholder="Nhập tên của bạn...">
 
                     </div>
 
                     <div class="input-check-order customer-phone">
                         <span class="title">Số điện thoại</span>
+                        <div class="invalid" >Thông tin không hợp lệ</div>
+                            
                         <input type="number" name="customerPhone" value="{{user.phone}}" placeholder="Nhập số điệnt thoại của bạn....">
                         
                     </div>
@@ -22,12 +26,16 @@
 
                 <div class="input-check-order customer-email">
                     <span class="title">Email</span>
+                    <div class="invalid" >Thông tin không hợp lệ</div>
+                            
                     <input type="email" name="customerEmail" value="{{user.email}}" placeholder="Nhập email của bạn....">
                     
                 </div>
 
                 <div class=" input-check-order customer-address">
                     <div class="title">Địa chỉ nhận hàng</div>
+                    <div class="invalid" >Thông tin không hợp lệ</div>
+                            
                     <textarea name="customerAddress" id="" cols="90" rows="2" placeholder="Nhập địa chỉ nhận hàng...."></textarea>
                 </div>
             </div>
@@ -135,7 +143,7 @@
                         <button><a href="/products">Tiếp tục mua hàng</a></button>
                     </div>
                     <div  class="btn-order order-now">
-                        <button type="submit">Đặt hàng ngay</button>
+                        <div class="btn-submit" onclick="validate_form_check_order()">Đặt hàng ngay</div>
                     </div>
 
                 </div>

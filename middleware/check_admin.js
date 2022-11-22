@@ -10,6 +10,8 @@ function checkAdmin(req,res,next) {
         //     res.json('ok')
         // }
         if(user[0].role === '1'){
+        // res.json("hello");
+
             next();
         }else{
             alert('Bạn không có quyền truy cập admin!')

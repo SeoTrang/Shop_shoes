@@ -31,14 +31,18 @@
                     <div class="main-info">
                         <div class="name form-input">
                             <label for="name">Tên</label>
+                            <div class="invalid" >Thông tin không hợp lệ</div>
+                            
                             <div class="my-form">
                                 <i class="fa-solid fa-user"></i>
                                 <input type="text" id="name" name="name">
                             </div>
                         </div>
 
-                        <div class="user form-input">
+                        <div class="user email form-input">
                             <label for="email">Email</label>
+                            <div class="invalid" >Thông tin không hợp lệ</div>
+                            
                             <div class="my-form">
                                 <i class="fa-solid fa-envelope"></i>
                                 <input type="email" id="email" name="email">
@@ -49,7 +53,8 @@
 
                         <div class="phone form-input">
                             <label for="phone">Số điện thoại</label>
-                            
+                            <div class="invalid" >Thông tin không hợp lệ</div>
+
                             <div class="my-form">
                                 <i class="fa-solid fa-square-phone"></i>
                                 <input type="number" id="phone" name="phone">
@@ -58,6 +63,7 @@
 
                         <div class="pass-word form-input">
                             <label for="pass-word">Mật khẩu</label>
+                            <div class="invalid" >Mật khẩu phải trên 6 kí tự</div>
                             
                             <div class="my-form">
                                 <i class="fa-solid fa-key"></i>
@@ -67,6 +73,7 @@
 
                         <div class="confirm-pass-word form-input">
                             <label for="confirm-pass-word">Nhập lại mật khẩu</label>
+                            <div class="invalid" >Mật khẩu không khớp</div>
                             
                             <div class="my-form">
                                 <i class="fa-solid fa-lock"></i>
@@ -87,10 +94,10 @@
                 </div>
 
                 <div class="submit">
-                    <button type="submit">
+                    <div onclick="validate_form_sign_up()" class="btn-submit" type="submit">
                         <i class="fa-solid fa-user-plus"></i>
                         <span>Tạo</span>
-                    </button>
+                    </div>
                 </div>
             </form>
 
@@ -98,7 +105,7 @@
         </div>
     </div>
 
-    {{!-- <script src=".js/auth.js"></script> --}}
+    <script src="./js/auth.js"></script>
 </div>
 </body>
 </html>

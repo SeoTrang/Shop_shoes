@@ -39,11 +39,21 @@ class siteControllers{
             if(data){
                 // res.json(data);
                 var token = jwt.sign({_id:data._id},'jwt');
+                // if(token){
+                    
+                // }else{
+                //     res.redirect('/sign-in')
+                // }
                 res.json({
                     message:'thanh cong',
                     token:token
                 });
-                // console.log(token);
+                //res.redirect(301,'/');
+                
+               // res.json(token);
+                //res.cookie('_id',signed._id, { maxAge: 24*60*60*1000, httpOnly: true })
+                
+                
             }else{
                 res.redirect('/sign-in');
 
@@ -67,20 +77,40 @@ class siteControllers{
         // res.json(req.file);
         // res.json(req.body);
         
-        const user = new users({
-            name       :req.body.name,
-            email      :req.body.email,
-            phone      :req.body.phone,
-            pass       :req.body.passWord,
-            avatar     :path_avatar+req.file.filename,
-            createdAt  :time_now,
-            booked     :'0',
-            temp       :'0',
-            role       :'0'
-        })
-
-        user.save();
-        res.redirect('/');
+        try {
+            const user = new users({
+                name       :req.body.name,
+                email      :req.body.email,
+                phone      :req.body.phone,
+                pass       :req.body.passWord,
+                avatar     :path_avatar+req.file.filename,
+                createdAt  :time_now,
+                booked     :'0',
+                temp       :'0',
+                role       :'0'
+            })
+    
+            user.save();
+            res.redirect('/');
+        } catch (error) {
+            try {
+                const user = new users({
+                    name       :req.body.name,
+                    email      :req.body.email,
+                    phone      :req.body.phone,
+                    pass       :req.body.passWord,
+                    createdAt  :time_now,
+                    booked     :'0',
+                    temp       :'0',
+                    role       :'0'
+                })
+        
+                user.save();
+                res.redirect('/');
+            } catch (error) {
+                
+            }
+        }
         
     }
 

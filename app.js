@@ -14,7 +14,7 @@ const res = require('express/lib/response');
 
 
 const app = express();
-var port = 2000;
+var port = 8001;
 
 // connect database
 var db = require('./config/db');
@@ -37,7 +37,7 @@ app.set('view engine', 'hbs');
 
 // morgan
 
-app.use(morgan('combined'))
+// app.use(morgan('combined'))
 
 // app.use(logger('dev'));
 app.use(express.json());

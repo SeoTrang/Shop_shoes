@@ -1328,17 +1328,29 @@ body{
     border: 1px solid #260759;
 }
 
-.order-info .check-order .order-now button{
+.order-info .check-order .order-now .btn-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #260759;
     color: #fff;
+    cursor: pointer;
+    width: 260px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #260759;
 }
 
 
-.order-info .check-order .order-now button:hover{
+.order-info .check-order .order-now .btn-submit:hover{
     background-color: transparent;
     color: #000;
     transition: 0.5s;
 
+}
+
+.order-info .check-order .continue-shoping a{
+    text-decoration: none;
 }
 
 .order-info .check-order .continue-shoping button:hover{
@@ -1409,4 +1421,12 @@ body{
 #products .product img{
     width: 263px;
     height: 257px;
+}
+
+
+/* ======================= invalid value form  */
+.invalid{
+    display: none;
+    color: red;
+    
 }

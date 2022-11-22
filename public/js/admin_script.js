@@ -125,6 +125,122 @@ for (let index = 0; index < sidebar_chind.length; index++) {
 }
 
 
+// ========================== bắt lỗi thêm sản phẩm ==========================
+
+//là kí tự đặc biệt
+ function is_special_character(props){
+  const invalid_char =  ['~','!','@','#','$','%','^','&','*','_',',','{','}'];
+  let array_props = props.split("");
+  for (let index = 0; index < array_props.length; index++) {
+    if(invalid_char.includes(array_props[index])){
+      return true;
+    }
+    
+  }
+
+  return false;
+}
+
+
+
+
+
+
+
+// validate add new products
+async function validate_form_new_product(){
+
+    let count_invalid = 0;
+    let form_element = await document.querySelector("#addProduct form");
+
+    let name = await document.querySelector("#addProduct .name input").value;
+    let price_old = await document.querySelector("#addProduct .price-old input").value;
+    let price = await document.querySelector("#addProduct .price input").value;
+    let promo = await document.querySelector("#addProduct .promo input").value;
+    let status = await document.querySelector("#addProduct .status input").value;
+    let count = await document.querySelector("#addProduct .count input").value;
+
+    if(name.length == 0 || is_special_character(name)){
+       
+        let name_element = await document.querySelector("#addProduct .name input");
+        let invalid_nofitication = await document.querySelector("#addProduct .name .invalid");
+        console.log(invalid_nofitication);
+        name_element.style.border = '1px solid red';
+        invalid_nofitication.style.display = 'block';
+         count_invalid  += 1; // tăng giá trị đếm trường sai lên
+
+        
+    }
+
+    if(price_old.length == 0 || is_special_character(price_old)){
+       
+      let name_element = await document.querySelector("#addProduct .price-old input");
+      let invalid_nofitication = await document.querySelector("#addProduct .price-old .invalid");
+      console.log(invalid_nofitication);
+      name_element.style.border = '1px solid red';
+      invalid_nofitication.style.display = 'block';
+      count_invalid  += 1; // tăng giá trị đếm trường sai lên
+
+      
+    }
+    if(price.length == 0 || is_special_character(price)){
+        
+      let name_element = await document.querySelector("#addProduct .price input");
+      let invalid_nofitication = await document.querySelector("#addProduct .price .invalid");
+      console.log(invalid_nofitication);
+      name_element.style.border = '1px solid red';
+      invalid_nofitication.style.display = 'block';
+      count_invalid  += 1; // tăng giá trị đếm trường sai lên
+
+      
+    }
+    if(promo.length == 0 || is_special_character(promo)){
+          
+      let name_element = await document.querySelector("#addProduct .promo input");
+      let invalid_nofitication = await document.querySelector("#addProduct .promo .invalid");
+      console.log(invalid_nofitication);
+      name_element.style.border = '1px solid red';
+      invalid_nofitication.style.display = 'block';
+      count_invalid  += 1; // tăng giá trị đếm trường sai lên
+
+      
+    }
+
+    if(status.length == 0 || is_special_character(status)){
+          
+      let name_element = await document.querySelector("#addProduct .status input");
+      let invalid_nofitication = await document.querySelector("#addProduct .status .invalid");
+      console.log(invalid_nofitication);
+      name_element.style.border = '1px solid red';
+      invalid_nofitication.style.display = 'block';
+
+      
+    }
+
+    if(count.length == 0 || is_special_character(count)){
+          
+      let name_element = await document.querySelector("#addProduct .count input");
+      let invalid_nofitication = await document.querySelector("#addProduct .count .invalid");
+      console.log(invalid_nofitication);
+      name_element.style.border = '1px solid red';
+      invalid_nofitication.style.display = 'block';
+
+      
+    }
+
+    // console.log(count_invalid);
+    if(count_invalid === 0){
+      form_element.submit();
+    }
+
+
+
+}
+
+
+
+
+
 
 // switch to put (update)
 

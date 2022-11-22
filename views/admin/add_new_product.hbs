@@ -11,42 +11,50 @@
                         <div class="name">
                             <label for="name">Tên sản phẩm</label>
                             <div class="form-input">
+                                <div class="invalid" >Thông tin không hợp lệ</div>
 
-                                <input type="text" placeholder="Nhập tên sản phẩm.." id="name" name="name">
+                                <input required type="text" placeholder="Nhập tên sản phẩm.." id="name" name="name">
                             </div>
                         </div>
 
                         <div class="price-old">
                             <label for="price-old">Giá Tiền cũ</label>
                             <div class="form-input">
+                                <div class="invalid" >Thông tin không hợp lệ</div>
 
-                                <input type="text" placeholder="Nhập giá tiền cũ.." id="price" name="priceOld">
+                                <input type="number" placeholder="Nhập giá tiền cũ.." id="price" name="priceOld">
                             </div>
                         </div>
                         <div class="price">
                             <label for="price">Giá Tiền</label>
                             <div class="form-input">
+                                <div class="invalid" >Thông tin không hợp lệ</div>
 
-                                <input type="text" placeholder="Nhập giá tiền.." id="price" name="price">
+                                <input type="number" placeholder="Nhập giá tiền.." id="price" name="price">
                             </div>
                         </div>
 
                         <div class="promo">
                             <label for="promo">Giảm Giá (%)</label>
                             <div class="form-input">
+                                <div class="invalid" >Thông tin không hợp lệ</div>
 
-                                <input type="number" min="0" value="0" placeholder="Phầm trăm giảm giá.." id="promo" name="promo">
+                                <input type="number" min="0" value="0" placeholder="Phầm trăm giảm giá.." id="promo" name="promo" maxlength="100">
                             </div>
                         </div>
 
                         <div class="status">
                             <label for="status">Tình trạng hàng (%)</label>
-                            <input type="number" minlength="0" id="status" name="status" value="100">
+                            <div class="invalid" >Thông tin không hợp lệ</div>
+
+                            <input type="number" min="0" id="status" name="status" value="100" max="100">
                         </div>
 
                         <div class="count">
                             <label for="count">Số lượng nhập</label>
-                            <input type="number" id="count" name="count">
+                            <div class="invalid" >Thông tin không hợp lệ</div>
+
+                            <input type="number" id="count" name="count" min="1">
                         </div>
                     </div>
 
@@ -85,6 +93,7 @@
                         <div class="text">
                             <label for="text">Thông tin thêm</label>
                             <div class="form-input">
+                                <div class="invalid" >Thông tin không hợp lệ</div>
                                 <textarea name="textInfo" id="text" cols="30" rows="2"></textarea>
                             </div>
                         </div>
@@ -197,11 +206,12 @@
                 
 
                 <div class="submit">
-                    <input type="submit" value="Thêm sản phẩm">
+                    <div class="button" onclick="validate_form_new_product()">Thêm sản phẩm</div>
                 </div>
+
             </div>
 
-    
+            <button type="submit" class="btn_submit" style="display: none;">them</button>
         </form>
 
       

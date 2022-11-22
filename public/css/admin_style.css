@@ -1483,15 +1483,52 @@
     /* background-color: #ffc107; */
 }
 
-#add-user .submit button{
+.submit button{
     background-color: none;
     border: none;
     width: 100%;
     background-color: #ffc107;
     padding: 5px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    min-height: 50px;
 }
 
-#add-user .submit button:hover{
+.submit button:hover{
     background-color: #017aec;
     transition: 0.5s;
+    color: white;
 }
+
+
+.submit .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: none;
+    border: none;
+    width: 100%;
+    background-color: #ffc107;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    min-height: 50px;
+}
+
+.submit .button:hover{
+    background-color: #017aec;
+    transition: 0.5s;
+    color: white;
+}
+
+.invalid{
+    display: none ;
+    color: #ed8300;
+}
+/* 
+.form-input input{
+    border: 1px solid red;
+} */
